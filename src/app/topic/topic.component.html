@@ -1,0 +1,6 @@
+<p>{{topics}}</p>
+<ol>
+  <li *ngFor="let t of topics">{{t}}</li>
+</ol>
+<input type="text" #inp>
+<button (click)="addli(inp.value)">add</button>

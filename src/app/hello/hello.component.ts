@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { concat } from 'rxjs/internal/observable/concat';
+
 
 @Component({
     selector:'app-hello',
@@ -14,5 +16,18 @@ export class HelloComponent{
     display:boolean=false;
     isSpecial:boolean=true;
     canSave:boolean=true;
-    stylename:string ='s1'
+    stylename:string ='s1';
+    stext:string="";
+
+
+    public handleClick(e:Event):void{
+        this.canSave=!this.canSave;
+        this.isSpecial=!this.isSpecial;
+        this.display=!this.display;
+        this.count++;
+    }
+    public showfun(e):void{
+        console.log("click")
+        this.stext=e;
+    }
 }

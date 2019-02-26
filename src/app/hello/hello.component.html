@@ -6,14 +6,16 @@
 <h4>{{schedule}}</h4>
 <h1>{{count}}</h1>
 </div>
-<button [disabled]="isDisabled">Next</button>
+<button [disabled]="isDisabled" (click)="handleClick($event)">Next</button>
 <button [style.color]="isSpecial ? 'red' : 'green' ">Red</button>
 <button [style.background-color]= "canSave ? 'cyan' : 'grey'" >Save</button>
 
-<div [class] ='stylename'>
+<div [class.s1] ='canSave'>
+    <p>Some Text goes here</p>
     <p>Some Text goes here</p>
 </div>
 
-
-
+<!-- <input type="text" id="txt" name="txt" #msg (keyup.Enter)="showfun(msg.value)"> -->
+<!-- <button (click)="showfun(msg.value)">show</button> -->
+<p>{{stext}}</p>
 </body>

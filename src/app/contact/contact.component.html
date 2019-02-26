@@ -1,3 +1,21 @@
-<p>
-  contact works!
-</p>
+
+<div class="col-xs-6 ">
+  
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Cell</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ='let c of contacts'>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.cell}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

@@ -1,0 +1,12 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:lightcoral;
+    font-size: 12px;
+}
+
+.s1{
+    color :lightslategrey;
+    border: 3px solid red;
+    margin-top: 20px;
+
+}

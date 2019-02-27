@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { concat } from 'rxjs/internal/observable/concat';
+import { HelloService } from 'src/app/hello/hello.service';
 
 
 @Component({
@@ -8,6 +9,10 @@ import { concat } from 'rxjs/internal/observable/concat';
     styleUrls:['./hello.component.css']
 })
 export class HelloComponent{
+    constructor(private hs:HelloService){
+
+    }
+
     msg :string = "welcome to angular class";
     loc: string = "PSL,Nagpur";
     schedule = '25Feb - 1 Mar';
@@ -23,8 +28,9 @@ export class HelloComponent{
     public handleClick(e:Event):void{
         this.canSave=!this.canSave;
         this.isSpecial=!this.isSpecial;
-        this.display=!this.display;
+        alert(this.hs.greet());
         this.count++;
+
     }
     public showfun(e):void{
         console.log("click")

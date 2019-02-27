@@ -15,6 +15,15 @@
         <td>{{c.email}}</td>
         <td>{{c.cell}}</td>
       </tr>
+      <tr >
+        <td><input type="text" #name></td>
+        <td><input type="text" #email></td>
+        <td><input type="text" #cell></td>
+        
+      </tr>
+      <tr>
+        <td><button (click)=addRecord(name,email,cell)>Add</button></td>
+      </tr>
     </tbody>
   </table>
   

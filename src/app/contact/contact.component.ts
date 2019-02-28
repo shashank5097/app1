@@ -11,7 +11,8 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
   styleUrls: ['./contact.component.css'],
   providers:[ContactService]
 })
-export class ContactComponent implements OnInit,OnDestroy {
+export class ContactComponent implements OnInit {
+   msg2="";
  
  public contacts:Array<Contact>;
   
@@ -24,19 +25,26 @@ export class ContactComponent implements OnInit,OnDestroy {
       this.contacts=data;
     });
   }
-  ngOnDestroy(){
-    this.cso.unsubscribe(()=>{
-      console.log("destroy")
-    });
-  }
+  
   public addRecord(name,email,cell){
-    var rec=new Contact(name.value,email.value,cell.value);
-    contacts.push(rec);
-    name.value=null;
-    email.value=null;
-    cell.value=null;
-
+    if (name.value != ""){
+      var rec=new Contact(name.value,email.value,cell.value);
+      contacts.push(rec);
+      name.value=null;
+      email.value=null;
+      cell.value=null;
+    }
+    else{
+      this.msg2="*Please Enter Name Atleast";
+    }
   }
+  public delrow(e){
+    console.log(e);
+    // console.log(contacts.find(item => item.name===e.id));
+    // var item1=contacts.find(item => item.name===e.id);
+    contacts.splice(contacts.indexOf(e),1);
+
+}
   // async load(){
   //   this.contacts= await this.getdata();
   // }

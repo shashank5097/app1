@@ -1,11 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <h2>{{msg}}</h2>
-  <!-- <app-hello></app-hello> -->
-  <app-contact></app-contact>
 
-  
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th><a [routerLink]="['/']" >HOME</a></th>
+                <th><a [routerLink]="['/hello']" >hello</a> </th>
+                <th><a [routerLink]="['/topic']" >Topic</a></th>
+                <th><a [routerLink]="['/contact']" >Contact</a></th>
+            </tr>
+        </thead>
+        
+    </table>
 </div>
+
+<router-outlet></router-outlet>

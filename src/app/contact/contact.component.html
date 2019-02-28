@@ -7,6 +7,8 @@
         <th>Name</th>
         <th>Email</th>
         <th>Cell</th>
+        <th>Delete</th>
+
       </tr>
     </thead>
     <tbody>
@@ -14,15 +16,17 @@
         <td>{{c.name}}</td>
         <td>{{c.email}}</td>
         <td>{{c.cell}}</td>
+        <td ><button class="btn btn-danger" (click)="delrow(c)" >Delete!</button></td>
       </tr>
       <tr >
         <td><input type="text" #name></td>
         <td><input type="text" #email></td>
         <td><input type="text" #cell></td>
         
+        
       </tr>
       <tr>
-        <td><button (click)=addRecord(name,email,cell)>Add</button></td>
+        <td colspan="3" ><button (click)=addRecord(name,email,cell)>Add</button><p >{{msg2}}</p></td>
       </tr>
     </tbody>
   </table>

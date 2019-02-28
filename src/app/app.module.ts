@@ -13,18 +13,24 @@ import { ContactService } from 'src/app/contact/contact.service';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { Routes } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { BannerComponent } from './banner/banner.component';
+import { CalcComponent } from './calc/calc.component';
+import { ContactdetailsComponent } from './contactdetails/contactdetails.component';
 
 const routs:Routes=[
   {path:'',component:HomeComponent, pathMatch:'full'},
   {path:'hello',component:HelloComponent, },
   {path:'topic',component:TopicComponent, },
   {path:'contact',component:ContactComponent, },
+  {path:'contactdetails/:nm',component:ContactComponent, },
+  
   {path:'**',component:PagenotfoundComponent, }
 ]
 
 @NgModule({
   declarations: [
-    AppComponent,HelloComponent, TopicComponent, ContactComponent, HomeComponent, PagenotfoundComponent
+    AppComponent,HelloComponent, TopicComponent, ContactComponent, HomeComponent, PagenotfoundComponent, HeaderComponent, BannerComponent, CalcComponent, ContactdetailsComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(routs)

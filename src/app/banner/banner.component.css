@@ -1,0 +1,7 @@
+.ss{
+    width: 250px;
+    height: 300px;
+}
+.ss:hover{
+    transform:scale(2.0);
+}

@@ -13,7 +13,7 @@
     </thead>
     <tbody>
       <tr *ngFor ='let c of contacts'>
-        <td>{{c.name}}</td>
+        <td><a [routerLink]="['/contactdetails',c.name]" >{{c.name}}</a></td>
         <td>{{c.email}}</td>
         <td>{{c.cell}}</td>
         <td ><button class="btn btn-danger" (click)="delrow(c)" >Delete!</button></td>

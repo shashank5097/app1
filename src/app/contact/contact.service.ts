@@ -21,6 +21,9 @@ export class ContactService{
         });
         return obs;
     }
+    public findByName(n:string){
+        return contacts.find(i => i.name ==n)
+    }
     
     
 

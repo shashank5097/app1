@@ -23,7 +23,7 @@ const routs:Routes=[
   {path:'hello',component:HelloComponent, },
   {path:'topic',component:TopicComponent, },
   {path:'contact',component:ContactComponent, },
-  {path:'contactdetails/:nm',component:ContactComponent, },
+  {path:'contactdetails/:nm',component:ContactdetailsComponent, },
   
   {path:'**',component:PagenotfoundComponent, }
 ]
@@ -35,7 +35,7 @@ const routs:Routes=[
   imports: [
     BrowserModule,RouterModule.forRoot(routs)
   ],
-  providers: [HelloService],
+  providers: [HelloService,ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
